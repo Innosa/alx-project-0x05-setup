@@ -1,10 +1,21 @@
-import { ReactNode } from 'react';
+import * as React from "react";
+import { ReactNode } from "react";
 
-export interface ComponentProps {
-    children: ReactNode;
+export interface ReactComponentProps {
+    children: React.ReactNode
+}
+
+export interface LayoutProps {
+  children: ReactNode
+}
+
+export interface PageRouteProps {
+  pageRoute: string;
 }
 
 export interface ButtonProps {
-    title: string;
-    action: () => void;
+  buttonLabel: string;
+  buttonSize?: string;
+  buttonBackgroundColor?: 'red' | 'blue' | 'orange' | 'green';
+  action?: () => void;
 }
